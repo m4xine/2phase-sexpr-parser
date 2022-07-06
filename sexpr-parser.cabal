@@ -1,0 +1,25 @@
+cabal-version:      2.4
+name:               sexpr-parser
+version:            0.1.0.0
+
+executable sexpr-parser
+    main-is:            Main.hs
+    other-modules:  
+        Obj,
+        Phase1,
+        Expr,
+        Phase2
+    build-depends:      
+        base ^>=4.14.3.0,
+        megaparsec ^>=9.2,
+        composition ^>=1.0,
+        mtl ^>=2.2,
+        free ^>=5.1,
+        deriving-compat ^>=0.6,
+        monad-loops ^>=0.4
+    default-language:   Haskell2010
+    default-extensions: 
+        DeriveFunctor,
+        TemplateHaskell,
+        LambdaCase
+    ghc-options:        -Wall 
